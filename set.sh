@@ -9,6 +9,21 @@ set nocompatible
 set fileformats=unix,dos,mac
 
 
+                                                                                                                       
+set expandtab
+set visualbell
+set number
+filetype indent off 
+set smartcase
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
+set softtabstop=0
+set writebackup
+set title
+set showcmd
+set showmatch
+syntax on
 
 set vb t_vb=
 
@@ -20,12 +35,7 @@ colorscheme slate
 " ファイルの上書きの前にバックアップを作る
 " (ただし、backupがオンでない限り、バックアップは上書きに成功した後削除される)
 
-set writebackup
-set title
-set number
-set showcmd
-set showmatch
-syntax on
+
 
 " 全角スペースの表示
 
