@@ -1,3 +1,4 @@
+#マイクロトロン用の設定
 keycode 101 = Control_R
 keycode 66  = Control_L
 keycode 102 = BackSpace
