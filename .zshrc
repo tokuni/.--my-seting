@@ -4,7 +4,6 @@ export HISTCONTROL=ignoreboth
 
 autoload -U colors; colors
 set prompt_subst
-export LANG=ja_JP.eucJP
 setopt auto_cd
 export CLICOLOR=true
 alias la='ls -a'
@@ -68,6 +67,9 @@ export QT_IM_MODULE=ibus
 export GTK_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
+
+#環境依存
+export LANG=ja_JP.eucJP
 
 #keybode setting
 setxkbmap -rules evdev -model jp106 -layout jp
