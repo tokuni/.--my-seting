@@ -23,6 +23,7 @@ set writebackup
 set title
 set showcmd
 set showmatch
+set hlsearch
 syntax on
 
 set vb t_vb=
