@@ -1,15 +1,7 @@
-"mkdir -p ~/.vim/bundle
-"git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-
 set autoindent
 set ts=4
-
-set nocompatible
-
+set nocompatible 
 set fileformats=unix,dos,mac
-
-
-                                                                                                                       
 set expandtab
 set visualbell
 set number
@@ -23,23 +15,24 @@ set writebackup
 set title
 set showcmd
 set showmatch
-set hlsearch
+
 syntax on
+set nohlsearch
+set cursorline
 
 set vb t_vb=
 
+set incsearch
+set wildmenu wildmode=list:full
+
+
+"Clojure 用
+nnoremap <C-c> :Eval<CR>
 colorscheme slate
 
-"----------------------------------------------------
 " バックアップ関係
-"----------------------------------------------------
-" ファイルの上書きの前にバックアップを作る
-" (ただし、backupがオンでない限り、バックアップは上書きに成功した後削除される)
-
-
 
 " 全角スペースの表示
-
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=lightblue
 match ZenkakuSpace /　/
 highlight tab ctermfg=yellow
@@ -52,17 +45,104 @@ set cursorline
 " 列を強調表示
 set cursorcolumn
 
+let s:dein_dir = expand('~/.cache/dein')
+" dein.vim 本体
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
-if has('vim_starting') 
-		set runtimepath+=~/.vim/bundle/neobundle.vim/ 
-endif 
+" dein.vim がなければ github から落としてくる
+	if &runtimepath !~# '/dein.vim'
+if !isdirectory(s:dein_repo_dir)
+	execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+endif
+	execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+endif
 
-call neobundle#rc(expand('~/.vim/bundle/')) 
-NeoBundleFetch 'Shougo/neobundle.vim' 
-filetype plugin on 
-NeoBundleCheck
-NeoBundle 'Shougo/unite.vim' 
-NeoBundle 'Shougo/unite.vim' 
-NeoBundle 'Shougo/neocomplcache.vim'
-NeoBundle 'slimv.vim'
 
+if dein#load_state(s:dein_dir)
+	call dein#begin(s:dein_dir)
+
+
+	call dein#add('Shougo/dein.vim')
+	call dein#add('Shougo/unite.vim')"補完関連
+	call dein#add('Shougo/neocomplcache.vim')"補完関連
+"	call dein#add('https://github.com/vim-latex/vim-latex')
+	call dein#add('Shougo/neomru.vim')
+	call dein#add('Shougo/vimshell.vim')
+	call dein#add('kien/rainbow_parentheses.vim')"括弧に色付け
+	
+	call dein#add('Shougo/vimproc.vim', {
+			\ 'build': {
+			\     'mac': 'make -f make_mac.mak',
+			\     'linux': 'make',
+			\     'unix': 'gmake',
+			\    },
+			\ })
+"	call dein#add('https://github.com/vim-ruby/vim-ruby')
+"	call dein#add('https://github.com/tpope/vim-rails')
+	call dein#add('https://github.com/scrooloose/nerdtree')"ディレクトリツリー
+	call dein#add('https://github.com/kovisoft/slimv')
+"	call dein#add('https://github.com/tpope/vim-pathogen')
+	call dein#add('https://github.com/tpope/vim-fireplace')
+"	call dein#add('guns/vim-clojure-static')
+"	call dein#add('kana/vim-filetype-haskell')
+"	call dein#add('eagletmt/ghcmod-vim')
+"	call dein#add('thinca/vim-quickrun')
+	call dein#add('vim-ipython')
+
+	" プラグインリストを収めた TOML ファイル
+	" 予め TOML ファイル（後述）を用意しておく
+	let g:rc_dir    = expand('~/.vim/rc')
+	let s:toml      = g:rc_dir . '/dein.toml'
+	let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+
+	" TOML を読み込み、キャッシュしておく
+	call dein#load_toml(s:toml,      {'lazy': 0})
+	call dein#load_toml(s:lazy_toml, {'lazy': 1})
+	" 設定終了
+	call dein#end()
+	call dein#save_state()
+endif
+
+" もし、未インストールものものがあったらインストール
+if dein#check_install()
+	call dein#install()
+endif
+filetype plugin indent on
+
+"autocmd FileType coq highlight SentToCoq ctermbg=17 guibg=#000080
+" Unit.vimの設定
+""""""""""""""""""""""""""""""
+" 入力モードで開始する
+let g:unite_enable_start_insert=1
+" バッファ一覧
+noremap <C-P> :Unite buffer<CR>
+" ファイル一覧
+noremap <C-N> :Unite -buffer-name=file file<CR>
+
+"neocomplcache
+let g:acp_enableAtStartup = 0
+" Use neocomplcache.
+let g:neocomplcache_enable_at_startup = 1
+" Use smartcase.
+let g:neocomplcache_enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+inoremap <expr><C-g>     neocomplcache#undo_completion()
+inoremap <expr><C-l>     neocomplcache#complete_common_string()
+
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+"括弧の色つけの個数
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
+
+"slimv
+"let g:slimvswankcmd = '! xterm -e sbcl --load  --load /home/shi/.cache/dein/repos/github.com/kovisoft/slimv/slime/start-swank.lisp &'
+"let g:slimv_swank_cmd = '! xterm -e  sbcl  --load /home/shi/.cache/dein/repos/github.com/kovisoft/slimv/slime/start-swank.lisp &'
+
+"let g:slimv_swank_clojure = '! xterm -e lein swank &'
+
+vmap <silent> ,ss :VimShellSendString<CR>
+" 選択中に,ss: 非同期で開いたインタプリタに選択行を評価させる
+nnoremap <silent> ,ss <S-v>:VimShellSendString<CR>
