@@ -88,6 +88,7 @@ if dein#load_state(s:dein_dir)
 "	call dein#add('eagletmt/ghcmod-vim')
 "	call dein#add('thinca/vim-quickrun')
 	call dein#add('vim-ipython')
+	call dein#add('devidhalter/jedi-vim')
 
 	" プラグインリストを収めた TOML ファイル
 	" 予め TOML ファイル（後述）を用意しておく
