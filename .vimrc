@@ -147,3 +147,16 @@ let g:rbpt_loadcmd_toggle = 0
 vmap <silent> ,ss :VimShellSendString<CR>
 " 選択中に,ss: 非同期で開いたインタプリタに選択行を評価させる
 nnoremap <silent> ,ss <S-v>:VimShellSendString<CR>
+
+"Python jedi-vim set
+"
+autocmd FileType python setlocal omnifunc=jedi#completions
+let g:jedi#completions_enabled = 0
+let g:jedi#auto_vim_configuration = 0
+if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+endif
+
+g:neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
+
+
