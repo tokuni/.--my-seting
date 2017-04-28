@@ -1,13 +1,11 @@
 [[plugins]]
-repo = 'Shougo/dein.vim'~
+repo = 'Shougo/dein.vim'
 [[plugins]]
-repo = 'Shougo/unite.vim'~
+repo = 'Shougo/unite.vim'
+[[plugins]]
+repo = 'tomasr/molokai'
 [[plugins]]
 repo = 'Shougo/neocomplcache.vim'
-[[plugins]]
-repo = 'slimv.vim'
-[[plugins]]
-repo = 'https://github.com/vim-latex/vim-latex'
 [[plugins]]
 repo = 'Shougo/neomru.vim'
 [[plugins]]
@@ -30,14 +28,9 @@ hook_post_update = '''
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 [[plugins]]
-repo = 'https://github.com/vim-ruby/vim-ruby'
-[[plugins]]
-repo = 'https://github.com/tpope/vim-rails/'
-[[plugins]]
 repo = 'https://github.com/scrooloose/nerdtree/'
+[[plugins]]
+repo = 'kien/rainbow_parentheses.vim'
 
 [[plugins]]
-repo = 'https://github.com/kovisoft/slimv/'
-
-[[plugins]]
-repo = 'https://github.com/adolenc/cl-neovim'
+repo = 'scrooloose/nerdtree'

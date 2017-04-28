@@ -1,0 +1,18 @@
+[[plugins]]
+repo = 'https://github.com/kovisoft/slimv'
+let g:slimvswankcmd = '! xterm -e sbcl --load  --load /home/shi/.cache/dein/repos/github.com/kovisoft/slimv/slime/start-swank.lisp &'
+let g:slimv_swank_cmd = '! xterm -e  sbcl  --load /home/shi/.cache/dein/repos/github.com/kovisoft/slimv/slime/start-swank.lisp &'
+let g:slimv_swank_clojure = '! xterm -e lein swank &'
+
+
+[[plugins]]
+repo = 'https://github.com/vim-latex/vim-latex'
+[[plugins]]
+repo = 'https://github.com/vim-ruby/vim-ruby'
+[[plugins]]
+repo = 'https://github.com/tpope/vim-rails/'
+[[plugins]]
+repo =  'davidhalter/jedi-vim'
+on_ft = 'python'
+[[plugins]]
+repo = 'https://github.com/ivanov/vim-ipython'

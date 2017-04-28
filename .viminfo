@@ -1,0 +1,281 @@
+# この viminfo ファイルは Vim 7.4 によって生成されました.
+# 変更する際には十分注意してください!
+
+# このファイルが書かれた時の 'encoding' の値
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# 最後の 検索パターン:
+~MSle0/neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
+
+# 最後の Substitute 検索パターン:
+~MSle0~&neocomplete#force_omni_input_patterns.python = '\h\w*\|[^. \t]\.\w*'
+
+# 最後に置換された文字列:
+$
+
+# コマンドライン 項目の履歴 (新しいものから古いものへ):
+:wq
+:e lang.toml
+:w
+:e dein.toml
+:w!
+:wviminfo!
+:w lang.toml
+:e ~/.vimrc
+:e ~/.vim/rc/
+:w'kk
+:vs
+:q
+:call dein#update()
+:call deepcopy(
+:q!
+:w!q
+:e .vim/rc/dein.toml
+
+# 検索文字列 項目の履歴 (新しいものから古いものへ):
+?  s.replace('--existing', '')
+
+# 式 項目の履歴 (新しいものから古いものへ):
+
+# 入力行 項目の履歴 (新しいものから古いものへ):
+
+# 入力行 項目の履歴 (新しいものから古いものへ):
+
+# レジスタ:
+"0	LINE	0
+		let s:toml      = g:rc_dir . '/dein.toml'
+""1	LINE	0
+		call dein#add('devidhalter/jedi-vim')
+"2	LINE	0
+		call dein#add('https://github.com/')"ディレクトリツリー
+"3	LINE	0
+		
+"4	LINE	0
+				\ })
+"5	LINE	0
+				\    },
+"6	LINE	0
+				\     'unix': 'gmake',
+"7	LINE	0
+				\     'linux': 'make',
+"8	LINE	0
+				\     'mac': 'make -f make_mac.mak',
+"9	LINE	0
+				\ 'build': {
+"-	CHAR	0
+	scrooloose/nerdtree
+
+# ファイルマーク:
+'0  12  0  ~/.vim/rc/lang.toml
+'1  11  0  ~/.vim/rc/dein.toml
+'2  7  10  ~/.vim/rc/dein.toml
+'3  6  21  ~/.vim/rc/dein.toml
+'4  28  0  ~/.vimrc
+'5  33  0  ~/.vim/rc/dein.toml
+'6  65  0  ~/.vimrc
+'7  1  0  ~/flask/venv/test.py
+'8  11  9  ~/flask/venv/test.py
+'9  34  3  ~/flask/venv/iexe-python@2
+
+# ジャンプリスト (新しいものが先):
+-'  12  0  ~/.vim/rc/lang.toml
+-'  36  27  ~/.vim/rc/dein.toml
+-'  5  0  ~/.vim/rc/lang.toml
+-'  8  32  ~/.vim/rc/lang.toml
+-'  12  0  ~/.vim/rc/dein.toml
+-'  11  0  ~/.vim/rc/dein.toml
+-'  4  49  ~/.vim/rc/dein.toml
+-'  2  40  ~/.vim/rc/lang.toml
+-'  10  0  ~/.vim/rc/lang.toml
+-'  1  0  ~/.vim/rc/lang.toml
+-'  7  10  ~/.vim/rc/dein.toml
+-'  1  0  ~/.vim/rc/dein.toml
+-'  6  21  ~/.vim/rc/dein.toml
+-'  28  0  ~/.vimrc
+-'  1  0  ~/.vimrc
+-'  33  0  ~/.vim/rc/dein.toml
+-'  65  0  ~/.vimrc
+-'  1  0  ~/flask/venv/test.py
+-'  11  9  ~/flask/venv/test.py
+-'  34  3  ~/flask/venv/iexe-python@2
+-'  1  0  ~/flask/venv/iexe-python@2
+-'  122  0  ~/.vimrc
+-'  124  0  ~/.vimrc
+-'  128  0  ~/.vimrc
+-'  81  0  ~/.vimrc
+-'  9  12  ~/flask/venv/test.py
+-'  117  0  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  118  0  ~/.bashrc
+-'  1  0  ~/a
+-'  115  23  ~/.bashrc
+-'  5  6  ~/.config/lxsession/LXDE/autostart
+-'  1  0  ~/.config/lxsession/LXDE/autostart
+-'  53  0  ~/.config/lxsession/LXDE/desktop.conf
+-'  2  0  ~/.config/lxsession/LXDE/desktop.conf
+-'  1  0  ~/.config/lxsession/LXDE/desktop.conf
+-'  193  0  ~/.xscreensaver
+-'  2  0  ~/.xscreensaver
+-'  1  0  ~/.xscreensaver
+-'  114  0  ~/.bashrc
+-'  193  0  ~/.xscreensaver
+-'  2  0  ~/.xscreensaver
+-'  1  0  ~/.xscreensaver
+-'  193  0  ~/.xscreensaver
+-'  2  0  ~/.xscreensaver
+-'  1  0  ~/.xscreensaver
+-'  193  0  ~/.xscreensaver
+-'  2  0  ~/.xscreensaver
+-'  1  0  ~/.xscreensaver
+-'  53  0  ~/.config/lxsession/LXDE/desktop.conf
+-'  2  0  ~/.config/lxsession/LXDE/desktop.conf
+-'  1  0  ~/.config/lxsession/LXDE/desktop.conf
+-'  193  0  ~/.xscreensaver
+-'  2  0  ~/.xscreensaver
+-'  1  0  ~/.xscreensaver
+-'  193  0  ~/.xscreensaver
+-'  2  0  ~/.xscreensaver
+-'  1  0  ~/.xscreensaver
+-'  193  0  ~/.xscreensaver
+-'  2  0  ~/.xscreensaver
+-'  1  0  ~/.xscreensaver
+-'  193  0  ~/.xscreensaver
+-'  2  0  ~/.xscreensaver
+-'  1  0  ~/.xscreensaver
+-'  53  0  ~/.config/lxsession/LXDE/desktop.conf
+-'  2  0  ~/.config/lxsession/LXDE/desktop.conf
+-'  1  0  ~/.config/lxsession/LXDE/desktop.conf
+-'  193  0  ~/.xscreensaver
+-'  2  0  ~/.xscreensaver
+-'  1  0  ~/.xscreensaver
+-'  193  0  ~/.xscreensaver
+-'  2  0  ~/.xscreensaver
+-'  1  0  ~/.xscreensaver
+-'  5  6  ~/.config/lxsession/LXDE/autostart
+-'  1  0  ~/.config/lxsession/LXDE/autostart
+-'  53  0  ~/.config/lxsession/LXDE/desktop.conf
+-'  2  0  ~/.config/lxsession/LXDE/desktop.conf
+-'  1  0  ~/.config/lxsession/LXDE/desktop.conf
+-'  193  0  ~/.xscreensaver
+-'  2  0  ~/.xscreensaver
+-'  1  0  ~/.xscreensaver
+-'  193  0  ~/.xscreensaver
+-'  2  0  ~/.xscreensaver
+-'  1  0  ~/.xscreensaver
+-'  193  0  ~/.xscreensaver
+-'  2  0  ~/.xscreensaver
+-'  1  0  ~/.xscreensaver
+-'  193  0  ~/.xscreensaver
+-'  2  0  ~/.xscreensaver
+-'  1  0  ~/.xscreensaver
+-'  53  0  ~/.config/lxsession/LXDE/desktop.conf
+-'  2  0  ~/.config/lxsession/LXDE/desktop.conf
+-'  1  0  ~/.config/lxsession/LXDE/desktop.conf
+-'  193  0  ~/.xscreensaver
+-'  2  0  ~/.xscreensaver
+-'  1  0  ~/.xscreensaver
+-'  193  0  ~/.xscreensaver
+-'  2  0  ~/.xscreensaver
+-'  1  0  ~/.xscreensaver
+
+# ファイル内マークの履歴 (新しいものから古いもの):
+
+> ~/.vim/rc/lang.toml
+	"	12	0
+	.	5	0
+	+	1	0
+	+	19	0
+	+	10	0
+	+	14	0
+	+	17	0
+	+	18	45
+	+	2	8
+	+	8	0
+	+	3	0
+	+	3	0
+	+	4	0
+	+	5	0
+	+	3	0
+	+	5	0
+
+> ~/.vim/rc/dein.toml
+	"	36	27
+	^	36	28
+	.	36	27
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	27
+	+	7	9
+	+	1	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	7	0
+	+	37	0
+	+	37	0
+	+	33	0
+	+	6	21
+	+	2	23
+	+	4	24
+	+	11	0
+	+	31	0
+	+	9	0
+	+	37	0
+	+	4	18
+	+	4	0
+	+	7	11
+	+	8	32
+	+	33	36
+	+	36	27
+
+> ~/.vimrc
+	"	70	0
+	^	75	27
+	.	65	0
+	+	65	0
+	+	65	0
+	+	129	0
+	+	65	0
+	+	65	0
+	+	65	0
+	+	64	0
+	+	65	35
+	+	65	17
+	+	64	0
+	+	65	0
+	+	75	0
+	+	70	35
+	+	75	26
+	+	65	0
+	+	65	0
+	+	65	0
+	+	64	0
+	+	65	0
+	+	64	0
+	+	117	0
+	+	63	0
+	+	65	0
+	+	64	0
+	+	65	0
+
+> ~/.vim/rc/NERD_tree_1
+	"	4	0
+	.	1	0
+	+	1	0

@@ -61,43 +61,18 @@ endif
 if dein#load_state(s:dein_dir)
 	call dein#begin(s:dein_dir)
 
-
-	call dein#add('Shougo/dein.vim')
-	call dein#add('Shougo/unite.vim')"補完関連
-	call dein#add('Shougo/neocomplcache.vim')"補完関連
-"	call dein#add('https://github.com/vim-latex/vim-latex')
-	call dein#add('Shougo/neomru.vim')
-	call dein#add('Shougo/vimshell.vim')
-	call dein#add('kien/rainbow_parentheses.vim')"括弧に色付け
-	
-	call dein#add('Shougo/vimproc.vim', {
-			\ 'build': {
-			\     'mac': 'make -f make_mac.mak',
-			\     'linux': 'make',
-			\     'unix': 'gmake',
-			\    },
-			\ })
-"	call dein#add('https://github.com/vim-ruby/vim-ruby')
-"	call dein#add('https://github.com/tpope/vim-rails')
-	call dein#add('https://github.com/scrooloose/nerdtree')"ディレクトリツリー
-	call dein#add('https://github.com/kovisoft/slimv')
-"	call dein#add('https://github.com/tpope/vim-pathogen')
-	call dein#add('https://github.com/tpope/vim-fireplace')
-"	call dein#add('guns/vim-clojure-static')
-"	call dein#add('kana/vim-filetype-haskell')
-"	call dein#add('eagletmt/ghcmod-vim')
-"	call dein#add('thinca/vim-quickrun')
-	call dein#add('vim-ipython')
-	call dein#add('devidhalter/jedi-vim')
+"	call dein#add('Shougo/deoplete.nvim')"補完関連
 
 	" プラグインリストを収めた TOML ファイル
 	" 予め TOML ファイル（後述）を用意しておく
 	let g:rc_dir    = expand('~/.vim/rc')
 	let s:toml      = g:rc_dir . '/dein.toml'
+	let s:lang      = g:rc_dir . '/lang.toml'
 	let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
 
 	" TOML を読み込み、キャッシュしておく
 	call dein#load_toml(s:toml,      {'lazy': 0})
+	call dein#load_toml(s:lang,      {'lazy': 0})
 	call dein#load_toml(s:lazy_toml, {'lazy': 1})
 	" 設定終了
 	call dein#end()
@@ -137,12 +112,6 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 "括弧の色つけの個数
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
-
-"slimv
-"let g:slimvswankcmd = '! xterm -e sbcl --load  --load /home/shi/.cache/dein/repos/github.com/kovisoft/slimv/slime/start-swank.lisp &'
-"let g:slimv_swank_cmd = '! xterm -e  sbcl  --load /home/shi/.cache/dein/repos/github.com/kovisoft/slimv/slime/start-swank.lisp &'
-
-"let g:slimv_swank_clojure = '! xterm -e lein swank &'
 
 vmap <silent> ,ss :VimShellSendString<CR>
 " 選択中に,ss: 非同期で開いたインタプリタに選択行を評価させる
