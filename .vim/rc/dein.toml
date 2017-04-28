@@ -3,6 +3,8 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'Shougo/unite.vim'
 [[plugins]]
+repo = 'Shougo/unite-outline'
+[[plugins]]
 repo = 'tomasr/molokai'
 [[plugins]]
 repo = 'Shougo/neocomplcache.vim'
@@ -25,8 +27,7 @@ hook_post_update = '''
   let g:dein#plugin.build = cmd
   '''
 [[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
+repo = 'Shougo/vimshell.vim'
 [[plugins]]
 repo = 'https://github.com/scrooloose/nerdtree/'
 [[plugins]]
