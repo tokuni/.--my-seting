@@ -34,3 +34,5 @@ repo = 'kien/rainbow_parentheses.vim'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
