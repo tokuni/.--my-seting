@@ -3,7 +3,7 @@ set ts=4
 set nocompatible 
 set fileformats=unix,dos,mac
 set expandtab
-set visualbell
+set visualbell "beep del
 set number
 filetype indent off 
 set smartcase
@@ -25,6 +25,13 @@ set vb t_vb=
 set incsearch
 set wildmenu wildmode=list:full
 
+"lang setting
+autocmd! FileType python setlocal expandtab tabstop=4 shiftwidth=4
+
+"enter indent nodel
+nnoremap o oX<C-h>
+nnoremap O OX<C-h>
+inoremap <CR> <CR>X<C-h>
 
 "Clojure 用
 nnoremap <C-c> :Eval<CR>
